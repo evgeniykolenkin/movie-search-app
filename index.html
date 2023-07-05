@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Search App</title>
+    <link
+      rel="shortcut icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <section class="movie__app">
+      <div class="movie__app-wrapper">
+        <div class="movie__app-logo">
+          <div class="container">
+            <p>Movie <span>Search App</span></p>
+          </div>
+        </div>
+
+        <div class="movie__app-search">
+          <div class="search__item">
+            <h3>Search Movie:</h3>
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Search Movie Title"
+              id="search__input"
+            />
+            <div class="search__list" id="search__list">
+              <div class="search__list-movie">
+                <div class="search__movie-thumbnail">
+                  <img src="resources/poster.jpg" alt="movie-poster" />
+                </div>
+                <div class="search__movie-info">
+                  <h3>Guardians of the Galaxy Vol.2</h3>
+                  <p>2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="movie__app-result">
+            <div class="result__movie-list">
+              <div class="result__movie-img">
+                <img src="resources/poster.jpg" alt="movie-poster" />
+              </div>
+              <div class="result__movie-info">
+                <h3 class="movie__title">Guardians of the galaxy Vol.2</h3>
+                <ul class="movie__info-list">
+                  <li class="year">Year: 2017</li>
+                  <li class="rated">Ratings: PG-13</li>
+                  <li class="released">Released: 05 May 2017</li>
+                </ul>
+                <p class="genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                <p class="writer">
+                  <b>Writer:</b> James Gunn, Don Abnett, Andy Lanning
+                </p>
+                <p class="actors">
+                  <b>Actors:</b> Chris Pratt, Zoe Saldana, Dave Bautista
+                </p>
+                <p class="plot">
+                  <b>Plot:</b> The Guardians struggle to keep together as a team
+                  while dealing with their personal family issues, notably
+                  Star-Lord's ecounter with his father the ambitions celestial
+                  being Ego.
+                </p>
+                <p class="language"><b>Language:</b> English</p>
+                <p class="awards"><b>Awards:</b> Nominated for 1 Oscar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+:root {
+  --md-dark-color: #1d1d1d;
+  --dark-color: #171717;
+  --lt-dark-color: #292929;
+  --yellow-color: #d4aa11;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.movie__app-wrapper {
+  min-height: 100vh;
+  background-color: #171717;
+}
+
+.movie__app-wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.movie__app-search {
+  background-color: #1d1d1d;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie__app-logo {
+  padding: 20px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.movie__app-logo p {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.movie__app-logo p span {
+  color: #d4aa11;
+}
+
+.search__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.search__item h3 {
+  align-self: center;
+  margin-right: 30px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.search__item .search__input {
+  box-sizing: border-box;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #292929;
+  width: 350px;
+}
+
+.search__list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.search__list-movie {
+  display: flex;
+  align-items: center;
+  background-color: #292929;
+  padding: 8px;
+  border-bottom: 1px solid #171717;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.search__list-movie:hover {
+  background-color: #1f1f1f;
+}
+
+.search__movie-thumbnail img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+.search__movie-info h3 {
+  font-weight: 600px;
+  font-size: 15px;
+}
+
+.search__movie-info p {
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.search__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search__list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search__list::-webkit-scrollbar-thumb {
+  background-color: #d4aa11;
+  outline: none;
+  border-radius: 10px;
+}
+
+.search__list-hide {
+  display: none;
+}
+
+.movie__app-result {
+  padding: 45px 0;
+}
+
+.movie__app-result img {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 4px solid #ffffff;
+}
+
+.result__movie-info {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 45px;
+}
+
+.movie__title {
+  font-size: 30px;
+  color: #d4aa11;
+}
+
+.movie__info-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.result__movie-info .year {
+  font-weight: 500;
+}
+
+.result__movie-info .rated {
+  background-color: #d4aa11;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.result__movie-info .released {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.result__movie-info .writer {
+  padding: 8px;
+  margin: 15px 0;
+}
+
+.result__movie-info .genre {
+  background-color: #292929;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.result__movie-info .plot {
+  max-width: 400px;
+  margin: 15px auto;
+}
+
+.result__movie-info .language {
+  color: #d4aa11;
+  font-style: italic;
+}
+
+.result__movie-info .awards {
+  font-weight: 300;
+  font-size: 15px;
+  margin: 15px 10px 0 0;
+}
+
+@media (min-width: 800px) {
+  .search__item {
+    flex-direction: row;
+  }
+
+  .search__item h3 {
+    margin-bottom: 0;
+  }
+  .result__movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .result__movie-info {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .result__movie-info .plot {
+    margin-left: 0;
+  }
+
+  .result__movie-info .writer {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .movie__info-list {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie__app-logo p {
+    font-size: 20px;
+  }
+
+  .search__input {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px 15px;
+  }
+
+  .search__item h3 {
+    font-size: 20px;
+  }
+
+  .search__list {
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .movie__info-list {
+    flex-direction: column;
+  }
+
+  .movie__info-list .rated {
+    margin: 10px 0;
+  }
+}
