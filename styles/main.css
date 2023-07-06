@@ -148,14 +148,16 @@ img {
   display: none;
 }
 
-.movie__app-result {
-  padding: 45px 0;
-}
-
 .movie__app-result img {
   max-width: 300px;
   margin: 0 auto;
   border: 4px solid #e7f3ef;
+}
+
+.result__movie-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .result__movie-info {
@@ -227,18 +229,11 @@ img {
   }
 
   .result__movie-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
   }
 
   .result__movie-info {
-    text-align: left;
     padding-top: 0;
-  }
-
-  .result__movie-info .plot {
-    margin-left: 0;
   }
 
   .result__movie-info .writer {
@@ -247,12 +242,7 @@ img {
   }
 
   .movie__info-list {
-    justify-content: flex-start;
     padding-left: 0;
-  }
-
-  .movie__title {
-    width: 500px;
   }
 }
 
