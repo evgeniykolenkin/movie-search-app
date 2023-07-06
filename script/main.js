@@ -7,7 +7,7 @@ const resultNode = document.getElementById("result__movie-list");
 
 // ищем в базе API фильм по названию
 async function loadMovies(movieTitle) {
-  const url = `http://www.omdbapi.com/?s=${movieTitle}&page=1&apikey=57e731e0`;
+  const url = `https://www.omdbapi.com/?s=${movieTitle}&page=1&apikey=57e731e0`;
   const res = await fetch(`${url}`);
   const data = await res.json();
   // проверка, что ответ получен
@@ -72,7 +72,7 @@ function loadMovieInfo() {
       searchList.classList.add("search__list-hide");
       inputNode.value = "";
       inputNode.focus();
-      const url = `http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=57e731e0`;
+      const url = `https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=57e731e0`;
       const res = await fetch(`${url}`);
       const movieInfo = await res.json();
       showMovieInfo(movieInfo);
