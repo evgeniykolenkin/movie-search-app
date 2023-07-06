@@ -1,3 +1,5 @@
+@import "advice.css";
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,9 +17,12 @@ img {
   display: block;
 }
 
+.movie__app {
+  padding: 10px;
+  background-color: #448d76;
+}
 .movie__app-wrapper {
   min-height: 100vh;
-  background-color: #448d76;
 }
 
 .movie__app-wrapper .container {
@@ -32,11 +37,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .movie__app-logo {
   padding: 20px 0;
-  border-bottom: 1px solid #292929;
 }
 
 .movie__app-logo p {

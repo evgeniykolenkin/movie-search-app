@@ -2,6 +2,7 @@
 const inputNode = document.getElementById("search__input");
 const searchList = document.getElementById("search__list");
 const resultNode = document.getElementById("result__movie-list");
+const anviceNode = document.getElementById("advice");
 
 // функции------------------------------
 
@@ -13,6 +14,10 @@ async function loadMovies(movieTitle) {
   // проверка, что ответ получен
   if (data.Response === "True") {
     showMovies(data.Search);
+    anviceNode.classList.add("advice__hide");
+  } else {
+    searchList.classList.add("search__list-hide");
+    anviceNode.classList.remove("advice__hide");
   }
 }
 
@@ -27,6 +32,7 @@ function findMovies() {
   } else {
     // если пусто в инпуте, то список скроется
     searchList.classList.add("search__list-hide");
+    anviceNode.classList.add("advice__hide");
   }
 }
 
