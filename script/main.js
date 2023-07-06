@@ -73,6 +73,7 @@ function showMovies(movies) {
 // получаем всю информацию о фильме по id при клике
 function loadMovieInfo() {
   const searchListMovies = searchList.querySelectorAll(".search__list-movie");
+  // дальше для каждого элемента из коллекции searchListMovies:
   searchListMovies.forEach((movie) => {
     movie.addEventListener("click", async () => {
       searchList.classList.add("search__list-hide");
@@ -118,11 +119,13 @@ function showMovieInfo(movie) {
   `;
 }
 
-// cлушатели событий
+// cлушатели событий---------------------------------------------
 
 // запуск функции, когда символ нажат и отпущен
 inputNode.addEventListener("keyup", findMovies);
+
 inputNode.addEventListener("click", findMovies);
+
 // скрывает выпадающий список по нажатию где-либо вне инпута
 window.addEventListener("click", (e) => {
   if (e.target.className !== "search__input") {
