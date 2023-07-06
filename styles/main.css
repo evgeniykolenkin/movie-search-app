@@ -62,20 +62,20 @@ img {
 }
 
 .search__item {
+  padding: 10px;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
   justify-content: center;
 }
 
 .search__item h3 {
   align-self: center;
-  margin-right: 30px;
   color: #e7f3ef;
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .search__input {
@@ -86,14 +86,14 @@ img {
   border-radius: 3px;
   outline: none;
   color: #292929;
-  width: 350px;
+  width: 400px;
 }
 
 .search__list {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 100%;
-  width: 350px;
+  width: 400px;
   max-height: 500px;
   overflow-y: auto;
   z-index: 10;
@@ -104,7 +104,6 @@ img {
   align-items: center;
   background-color: #093426;
   padding: 8px;
-  border-bottom: 1px solid #171717;
   color: #e7f3ef;
   cursor: pointer;
   transition: background-color 200ms ease;
@@ -222,43 +221,11 @@ img {
   margin: 15px 10px 0 0;
 }
 
-@media (max-width: 500px) {
-  .movie__app-logo p {
-    font-size: 20px;
-  }
-
-  .search__input {
-    width: 90%;
-    margin: 0 auto;
-    padding: 8px 15px;
-  }
-
-  .search__list {
-    width: 90%;
-    right: 50%;
-    transform: translateX(50%);
-  }
-
-  .movie__info-list {
+@media (max-width: 800px) {
+  .search__item {
     flex-direction: column;
   }
 
-  .movie__info-list .rated {
-    margin: 10px 0;
-  }
-  .movie__title {
-    width: 100%;
-  }
-}
-
-@media (min-width: 800px) {
-  .search__item {
-    flex-direction: row;
-  }
-
-  .search__item h3 {
-    margin-bottom: 0;
-  }
   .result__movie-list {
     display: flex;
     justify-content: center;
@@ -286,5 +253,38 @@ img {
 
   .movie__title {
     width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie__app-logo p {
+    font-size: 20px;
+  }
+
+  .search__item {
+    width: 100%;
+  }
+
+  .search__input {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 15px;
+  }
+
+  .search__list {
+    width: 100%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .movie__info-list {
+    flex-direction: column;
+  }
+
+  .movie__info-list .rated {
+    margin: 10px 0;
+  }
+  .movie__title {
+    width: 100%;
   }
 }
