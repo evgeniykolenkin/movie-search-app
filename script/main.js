@@ -77,7 +77,6 @@ function loadMovieInfo() {
   searchListMovies.forEach((movie) => {
     movie.addEventListener("click", async () => {
       searchList.classList.add("search__list-hide");
-      inputNode.value = "";
       const url = `https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=57e731e0`;
       const res = await fetch(`${url}`);
       const movieInfo = await res.json();
