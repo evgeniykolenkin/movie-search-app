@@ -41,6 +41,7 @@ img {
 }
 
 .movie__app-logo {
+  width: 350px;
   padding: 20px 0;
 }
 
@@ -247,6 +248,10 @@ img {
 }
 
 @media (max-width: 500px) {
+  .movie__app-logo {
+    width: 240px;
+  }
+
   .movie__app-logo p {
     font-size: 20px;
   }
@@ -275,6 +280,12 @@ img {
     margin: 10px 0;
   }
   .movie__title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .movie__app-logo {
     width: 100%;
   }
 }
